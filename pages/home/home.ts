@@ -3,26 +3,27 @@ import { NavController } from "ionic-angular";
 
 @Component({
   selector: "page-home",
-  templateUrl: "home.html"
+  templateUrl: "home.html",
+  styleUrls: ["home.css"]
 })
 export class HomePage {
   height: number;
   weight: number;
-  bmi: number;
-  bmiMessage: string;
-  constructor(public navCtrl: NavController) {}
-  calculateBMI() {
-    this.bmi = this.weight / (this.height * this.height);
-    this.bmi = parseFloat(this.bmi.toFixed(2));
+  intake: number;
+  bmr: number;
+  activeLevel: number;
+  age: number;
+  sex: string;
 
-    if (this.bmi < 18.5) {
-      this.bmiMessage = "Underweight";
-    } else if (this.bmi > 18.5 && this.bmi < 25) {
-      this.bmiMessage = "Normal";
-    } else if (this.bmi > 25 && this.bmi < 30) {
-      this.bmiMessage = "Overweight";
-    } else {
-      this.bmiMessage = "Obese";
+  constructor(public navCtrl: NavController) {}
+
+  calculateIntake() {
+    if (this.sex == "f") {
+      this.bmr = 10 * this.weight + 6.25 * this.height - 5 * this.age - 161;
+    } else if (this.sex == "m") {
+      this.bmr = 10 * this.weight + 6.25 * this.height - 5 * this.age + 5;
     }
+    this.intake = this.bmr * this.activeLevel;
+    this.intake = parseFloat(this.intake.toFixed(2));
   }
 }

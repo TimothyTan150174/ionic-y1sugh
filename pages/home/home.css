@@ -1,0 +1,28 @@
+ion-content {
+  background: linear-gradient(to top, #414719, #7a943e);
+}
+h1 {
+  color: #e7dba8;
+  font-size: xxx-large;
+  font-weight: bold;
+}
+a {
+  color: #e7dba8;
+  font-weight: lighter;
+  font-style: oblique;
+}
+img {
+  border: 7px solid #e7dba8;
+  border-radius: 50px;
+}
+h2 {
+  color: #e7dba8;
+}
+p {
+  color: #e7dba8;
+  font-size: larger;
+}
+ion-item {
+  color: #e7dba8;
+  background-color: #6d772b;
+}

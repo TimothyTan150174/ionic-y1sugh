@@ -5,29 +5,65 @@ import { defineComponent } from 'vue';
 
 <ion-header>
 	<ion-navbar>
-		<ion-title>Body Mass Index (BMI) Calculator</ion-title>
+		<ion-title>Calculator App</ion-title>
 	</ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
-	<p>There's no "perfect weight" that fits everyone. BMI, or body mass index, measures how healthy your weight is
-		based on how tall you are. It gives you a clue to your risk for weight-related health problems.</p>
+	<h1>Daily Calorie Intake Calculator App</h1>
+
+	<p>Calories are the amount of energy our bodies get from eating food. So knowing this, how much of it do we need per
+		day? The amount of calories we need depends on our age, sex, and the amount of exercise we do. Use this
+		calculator to get an approxiamte vaue on how many calories you need daily.</p>
 
 	Source: <a href="https://www.webmd.com">https://www.webmd.com</a>
+
+	<p> </p>
+
+
 	<ion-item>
-		<ion-label>Height in meters:</ion-label>
+		<ion-label>Sex</ion-label>
+		<ion-select [(ngModel)]="sex" placeholder="Select One">
+			<ion-option value="f">Female</ion-option>
+			<ion-option value="m">Male</ion-option>
+		</ion-select>
+	</ion-item>
+
+	<ion-item>
+		<ion-label>Height in centimeters:</ion-label>
 		<ion-input type="number" [(ngModel)]="height"></ion-input>
 	</ion-item>
 
 	<ion-item>
 		<ion-label>Weight in kilograms:</ion-label>
 		<ion-input type="number" [(ngModel)]="weight"></ion-input>
-
 	</ion-item>
-	<button ion-button color="secondary" (click)=calculateBMI()>CALCULATE</button>
 
-	<ion-item *ngIf="bmi">
-		<h2>Your BMI is: {{bmi}} <code> ({{bmiMessage}})</code></h2>
+	<ion-item>
+		<ion-label>Age:</ion-label>
+		<ion-input type="age" [(ngModel)]="age"></ion-input>
+	</ion-item>
+
+	<ion-item>
+		<ion-label>Physical Activity Level</ion-label>
+		<ion-select [(ngModel)]="activeLevel" placeholder="Select One">
+			<ion-option value=1.2>Sedentary (little or no exercise)</ion-option>
+			<ion-option value=1.4>Slight (exercise 1-2 days/week)</ion-option>
+			<ion-option value=1.6>Moderate (exercise 2-3 days/week)</ion-option>
+			<ion-option value=1.75>Very (exercise 4-5 days/week)</ion-option>
+			<ion-option value=2.0>Extra (exercise 6-7 days/week)</ion-option>
+			<ion-option value=2.3>Professional athlete</ion-option>
+		</ion-select>
+	</ion-item>
+
+	<p> </p>
+
+	<button ion-button color="light" (click)=calculateIntake()>CALCULATE</button>
+
+	<p> </p>
+
+	<ion-item *ngIf="intake">
+		<h2>Your suggested calorie intake is: {{intake}} kcal/day</h2>
 	</ion-item>
 </ion-content>
