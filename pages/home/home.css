@@ -1,5 +1,4 @@
 ion-content {
-  color:#6d772b;
   background: #6d772b
 }
 h1 {
@@ -24,6 +23,6 @@ p {
   font-size: larger;
 }
 ion-item {
-  color: #e7dba8;
+  color: #d8d6cc;
   background-color: #6d772b;
 }
