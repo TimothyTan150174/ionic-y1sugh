@@ -1,5 +1,5 @@
 ion-content {
-background: linear-gradient(
+  background: linear-gradient(
       217deg,
       rgba(192, 178, 122, 0.199),
       rgba(3, 19, 109, 0) 45%
@@ -13,7 +13,7 @@ h1 {
   font-weight: bold;
 }
 a {
-  color: #e7dba8;
+  color: #eeeeee;
   font-weight: lighter;
   font-style: oblique;
 }
