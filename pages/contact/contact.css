@@ -1,6 +1,11 @@
 ion-content {
-  color: #6d772b;
-  background: #6d772b;
+background: linear-gradient(
+      217deg,
+      rgba(192, 178, 122, 0.199),
+      rgba(3, 19, 109, 0) 45%
+    ),
+    linear-gradient(127deg, rgba(48, 82, 4, 0.8), rgb(109, 119, 43, 0) 110%),
+    linear-gradient(336deg, rgba(17, 31, 0, 0.8), rgba(159, 109, 40, 0) 110%);
 }
 h1 {
   color: #e7dba8;
@@ -14,9 +19,10 @@ a {
 }
 img {
   border: 3px solid #e7dba8;
-  border-radius: 50px;
 }
-h2 {
+h2,
+h3,
+ion-label {
   color: #e7dba8;
 }
 p {
@@ -30,11 +36,13 @@ ion-item {
   color: #e7dba8;
   background-color: #6d772b;
 }
-table, th, td {
+table,
+th,
+td {
   border: 3px solid #47500f;
   text-align: center;
 }
 
-tr{
-  color: #e7dba8
+tr {
+  color: #e7dba8;
 }

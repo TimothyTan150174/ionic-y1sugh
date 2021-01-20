@@ -1,5 +1,11 @@
 ion-content {
-  background: #6d772b
+  background: linear-gradient(
+      217deg,
+      rgba(192, 178, 122, 0.199),
+      rgba(3, 19, 109, 0) 45%
+    ),
+    linear-gradient(127deg, rgba(48, 82, 4, 0.8), rgb(109, 119, 43, 0) 110%),
+    linear-gradient(336deg, rgba(17, 31, 0, 0.8), rgba(159, 109, 40, 0) 110%);
 }
 h1 {
   color: #e7dba8;
@@ -23,6 +29,6 @@ p {
   font-size: larger;
 }
 ion-item {
-  color: #d8d6cc;
-  background-color: #6d772b;
+  color: #e7dba8;
+  background-color: rgba(67, 97, 30, 0.8);
 }
